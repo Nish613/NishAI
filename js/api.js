@@ -5,11 +5,10 @@ const GeminiAPI = {
 
   // Fetch API key from server (reads from .env)
   async getKeyFromServer() {
-    const res = await fetch("/config");
-    const data = await res.json();
-    return data.apiKey || "";
-  },
-
+  const res = await fetch("/.netlify/functions/config");
+  const data = await res.json();
+  return data.apiKey || "";
+},
   // Save the API key to localStorage (fallback)
   saveKey(key) {
     localStorage.setItem(CONFIG.API_KEY_STORAGE, key.trim());
