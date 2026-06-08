@@ -43,6 +43,17 @@ const App = {
 
     // Sidebar toggle
     UI.sidebarToggle.addEventListener("click", () => UI.toggleSidebar());
+    // Mobile menu button
+document.getElementById("mobileMenuBtn")?.addEventListener("click", () => {
+  UI.sidebar.classList.toggle("mobile-open");
+  document.getElementById("sidebarOverlay")?.classList.toggle("active");
+});
+
+// Close sidebar when overlay is clicked
+document.getElementById("sidebarOverlay")?.addEventListener("click", () => {
+  UI.sidebar.classList.remove("mobile-open");
+  document.getElementById("sidebarOverlay")?.classList.remove("active");
+});
 
     // Clear history
     UI.clearHistoryBtn.addEventListener("click", () => {

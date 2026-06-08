@@ -24,6 +24,9 @@
   <!-- Background canvas for animated grid -->
   <canvas id="bg-canvas"></canvas>
 
+  <!-- Overlay for mobile sidebar -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
   <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
@@ -44,23 +47,13 @@
       <p class="nav-label">Features</p>
 
       <button class="feature-btn active" data-feature="explain">
-        
         <div class="feature-info">
           <span class="feature-name">Explain a Concept</span>
           <span class="feature-desc">Break down complex ideas simply</span>
         </div>
       </button>
 
-      <!--<button class="feature-btn" data-feature="eli5">
-        <span class="feature-icon">🧒</span>
-        <div class="feature-info">
-          <span class="feature-name">Explain Like I'm 5</span>
-          <span class="feature-desc">Ultra-simple explanations</span>
-        </div>
-      </button>-->
-
       <button class="feature-btn" data-feature="summarize">
-        
         <div class="feature-info">
           <span class="feature-name">Summarize Text</span>
           <span class="feature-desc">Condense long content</span>
@@ -68,53 +61,12 @@
       </button>
 
       <button class="feature-btn" data-feature="bullets">
-        
         <div class="feature-info">
           <span class="feature-name">Convert to Bullets</span>
           <span class="feature-desc">Structured key points</span>
         </div>
       </button>
-
-      <!--<button class="feature-btn" data-feature="quiz">
-        <span class="feature-icon">❓</span>
-        <div class="feature-info">
-          <span class="feature-name">Generate Quiz</span>
-          <span class="feature-desc">Test your knowledge</span>
-        </div>
-      </button>
-
-      <button class="feature-btn" data-feature="flashcards">
-        <span class="feature-icon">🃏</span>
-        <div class="feature-info">
-          <span class="feature-name">Flashcards</span>
-          <span class="feature-desc">Study with Q&A cards</span>
-        </div>
-      </button>
-
-      <button class="feature-btn" data-feature="professional">
-        <span class="feature-icon">💼</span>
-        <div class="feature-info">
-          <span class="feature-name">Rewrite Professionally</span>
-          <span class="feature-desc">Polish your writing</span>
-        </div>
-      </button>
-
-      <button class="feature-btn" data-feature="interview">
-        <span class="feature-icon">🎙️</span>
-        <div class="feature-info">
-          <span class="feature-name">Interview Questions</span>
-          <span class="feature-desc">Prep for interviews</span>
-        </div>
-      </button>
-
-      <button class="feature-btn" data-feature="studyplan">
-        <span class="feature-icon">📅</span>
-        <div class="feature-info">
-          <span class="feature-name">Create Study Plan</span>
-          <span class="feature-desc">Structured learning path</span>
-        </div>
-      </button>
-    </nav>-->
+    </nav>
 
     <div class="sidebar-footer">
       <button class="clear-history-btn" id="clearHistory">
@@ -134,8 +86,17 @@
     <!-- Top bar -->
     <header class="topbar">
       <div class="topbar-left">
-        <h1 class="current-feature-title" id="currentFeatureTitle">Explain a Concept</h1>
-        <p class="current-feature-subtitle" id="currentFeatureSubtitle">Break down complex ideas into clear, understandable explanations</p>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        <div>
+          <h1 class="current-feature-title" id="currentFeatureTitle">Explain a Concept</h1>
+          <p class="current-feature-subtitle" id="currentFeatureSubtitle">Break down complex ideas into clear, understandable explanations</p>
+        </div>
       </div>
       <div class="topbar-right">
         <div class="model-badge">
