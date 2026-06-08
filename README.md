@@ -3,10 +3,14 @@
 NishAI is a web-based AI tool that takes user input, sends it to an LLM API, and displays the generated response.
 
 ## Live Demo
+You can test the app here : 
 
 [https://6a26659fcc908739e949a68f--nishaifinal1.netlify.app/](https://6a266c07ecc154000815b1a9--nishai.netlify.app/)
 
 ---
+You can watch demo video of the app here :
+
+https://drive.google.com/file/d/1LAsIQUgWWrFTFgIF8LCCiXSR6QVdnw87/view?usp=sharing
 
 ## Task Objective
 
